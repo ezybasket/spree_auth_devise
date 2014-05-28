@@ -9,6 +9,7 @@ module Spree
            :rememberable, :trackable, :validatable, :encryptable, :encryptor => 'authlogic_sha512'
 
     has_many :orders
+    has_many :grocery_lists
 
     before_validation :set_login
     before_destroy :check_completed_orders
